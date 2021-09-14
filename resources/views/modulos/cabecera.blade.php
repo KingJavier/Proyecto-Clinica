@@ -22,7 +22,7 @@
 <ul class="dropdown-menu">
     <li class="user-footer">
         <div class="pull-left">
-            <a href="{{url('Mis-Datos')}}" class="btn btn-primary btn-flat">perfil</a>
+            <a href="{{url('Mis-Datos-edit/'.auth()->user()->id)}}" class="btn btn-primary btn-flat">perfil</a>
         </div>
         <div class="pull-right">
         <a href="{{route( 'logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="btn btn-danger btn-flat">salir</a>

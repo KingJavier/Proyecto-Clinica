@@ -5,10 +5,11 @@
 <h1>Mis Datos</h1>
 </section>
 <section class="content">
- 
+
+    {{dd($user)}}
     <div class="box">
         <div class="box-body">
-            <form method="post">
+            <form method="post" action="{{url('/'.$perfil->id)}}">
  			@csrf
                   @method('put')
  
