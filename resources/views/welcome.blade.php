@@ -56,7 +56,7 @@
             <li class="nav-item">
               @if (Route::has('login'))
                 @auth
-                <button><a href="{{ url('/home') }}" class="nav-link ">Inicio</a></button>
+                <button><a href="{{ url('Inicio') }}" class="nav-link ">Inicio</a></button>
                 @else
             </li>
             <li class="nav-item">

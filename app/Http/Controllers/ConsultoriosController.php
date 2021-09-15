@@ -79,6 +79,7 @@ class ConsultoriosController extends Controller
     {
         DB::table('consultorios')->where('id',request('id'))->update(['consultorio'=>request('consultorioE')]);
         return redirect('Consultorios');
+        
     }
 
 
