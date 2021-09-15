@@ -1,7 +1,7 @@
 <header class="main-header">
-<a href="{{url('inicio')}}"class="logo">
+<a href="{{url('Inicio')}}"class="logo">
     <span class="logo-mini"><b>C M</b></span>
-    <span class="logo-lg"><b>Clinica Medica</b></span>
+    <span class="logo-lg"><b>Clinica-Esperanza</b></span>
 </a>
 <nav class="navbar navbar-static-top">
     <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
@@ -23,6 +23,9 @@
     <li class="user-footer">
         <div class="pull-left">
             <a href="{{url('Mis-Datos-edit/'.auth()->user()->id)}}" class="btn btn-primary btn-flat">perfil</a>
+        </div>
+        <div class="pull-left">
+            <a href="{{ url('/') }}" class="btn btn-primary btn-flat">Volver</a>
         </div>
         <div class="pull-right">
         <a href="{{route( 'logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="btn btn-danger btn-flat">salir</a>
