@@ -68,5 +68,5 @@ Route::get('Mis-Datos',[PerfilController::class, 'index']);
 
 Route::get('Mis-Datos-edit/{id}',[PerfilController::class, 'edit']);
 
-
+Route::put('update-horarios/{id}', [InicioController::class, 'update'])->name('update.inicio');
 
