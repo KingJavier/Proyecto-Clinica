@@ -1,9 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 use App\Models\User;
 
 class PerfilController extends Controller
@@ -15,7 +16,7 @@ class PerfilController extends Controller
      */
     public function index()
     {
-        return view('modulos.Mis-Datos');
+        //
     }
 
     /**
@@ -25,7 +26,7 @@ class PerfilController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
@@ -58,16 +59,9 @@ class PerfilController extends Controller
      */
     public function edit($id)
     {
-        $id = auth()->user()->id;
-        
-        //$pacientes = DB::table('users') ->where('id', $id);
-        //$pacientes = DB::select('select * from users where id='.$id);
-
-        
-        //DB::table('consultorios')->where('id',request('id'))->update(['consultorio'=>request('consultorioE')]);
-        $var = User::findOrFail($id);
-        return view('modulos.Mis-Datos',['user' => $var]);
-        
+        $id = Auth::id();
+        $usuario = DB::select('select * from users where id='.$id);
+        return view('modulos.Mis-Datos',compact('usuario'));
     }
 
     /**
@@ -78,8 +72,23 @@ class PerfilController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
-    {
-        
+    {   
+        $usuario[0] = User::findOrFail($id);
+        $usuario[0]->name = $request->input('name');
+        $usuario[0]->email = $request->input('email');
+        $Contraseña=$request->input('password');
+
+        if ($Contraseña >= 9) {
+            $ContraseñaDB = Hash::make($Contraseña);
+            $usuario[0]->password= $ContraseñaDB;
+
+        }else{
+
+        }
+        $usuario[0]->documento = $request->input('documento');
+        $usuario[0]->telefono = $request->input('telefono');
+        $usuario[0]->save();
+        return redirect('Mis-Datos/{id}');
     }
 
     /**
@@ -93,3 +102,4 @@ class PerfilController extends Controller
         //
     }
 }
+

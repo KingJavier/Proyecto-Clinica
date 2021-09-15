@@ -17,12 +17,10 @@ class CreateInicioTable extends Migration
             $table->id();
             $table->text('dias');
             $table->text('email');
-            $table->text('horaInicio');
-            $table->text('horaFin');
+            $table->text('hora');
             $table->text('direccion');
             $table->text('telefono');
-            $table->text('logo');
- 
+            $table->timestamps(); 
         });
 
     }

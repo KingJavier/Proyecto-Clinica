@@ -75,9 +75,17 @@ class InicioController extends Controller
      * @param  \App\Models\Inicio  $inicio
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Inicio $inicio)
+    public function update(Request $request, $id)
     {
         //
+        $findInicio = Inicio::find($id);
+        $findInicio->dias = $request->dias;
+        $findInicio->hora = $request->hora;
+        $findInicio->direccion = $request->direccion;
+        $findInicio->telefono = $request->telefono;
+        $findInicio->email = $request->email;
+        $findInicio->save();
+        return back()->with('mensaje', 'Horarios y informacion actualizados con exito!');
     }
 
     /**

@@ -64,9 +64,11 @@ Route::put('actualizar-paciente/{paciente}',[PacientesController::class, 'update
 
 Route::get('Eliminar-Paciente/{id}',[PacientesController::class, 'destroy']);
 
-Route::get('Mis-Datos',[PerfilController::class, 'index']);
+//Route::get('Mis-Datos',[PerfilController::class, 'index']);
 
-Route::get('Mis-Datos-edit/{id}',[PerfilController::class, 'edit']);
+Route::get('Mis-Datos/{id}', [PerfilController::class, 'edit']);
 
+Route::put('ActucalizarDatos/{id}', [PerfilController::class, 'update']);
 
+Route::put('update-horarios/{id}', [InicioController::class, 'update'])->name('update.inicio');
 

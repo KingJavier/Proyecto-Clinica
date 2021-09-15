@@ -5,11 +5,10 @@
 <h1>Mis Datos</h1>
 </section>
 <section class="content">
-
-    {{dd($user)}}
+ 
     <div class="box">
         <div class="box-body">
-            <form method="post" action="{{url('/'.$perfil->id)}}">
+            <form method="Post" action="{{ url('ActucalizarDatos/'.$usuario[0]->id)}}">
  			@csrf
                   @method('put')
  
@@ -17,10 +16,10 @@
                     <div class="col-md-6 col-xs-12">
                     <h2>Nombre y Apellido</h2>
                     <input type="text" class="input-lg" name="name"
-                    value="{{auth()->user()->name}}">
+                    value="{{$usuario[0]->name}}">
                     <h2>Email</h2>
                     <input type="email" class="input-lg" name="email"
-                    value="{{auth()->user()->email}}">
+                    value="{{$usuario[0]->email}}">
                     @error('email')
                     <p class="alert alert-danger">El email ya existe</p>
  
@@ -33,11 +32,11 @@
                     <div class="col-md-6 col-xs-12">
                     <h2>Documento</h2>
                     <input type="text" class="input-lg" name="documento"
-                    value="{{auth()->user()->documento}}">
+                    value="{{$usuario[0]->documento}}">
  
                     <h2>Telefono</h2>
                     <input type="texto" class="input-lg" name="telefono"
-                    value="{{auth()->user()->telefono}}">
+                    value="{{$usuario[0]->telefono}}">
                     <br><br><br>
                     <button type="submit" class="btn btn-success">Guardar</button>
  
@@ -50,3 +49,5 @@
 </div>
  
 @endsection
+ 
+

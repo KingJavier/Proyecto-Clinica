@@ -56,6 +56,7 @@
             <li class="nav-item">
               <a class="nav-link" href="#">Responsabilidad Social</a>
             </li>
+<<<<<<< HEAD
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true"
                 aria-expanded="false">Más</a>
@@ -66,6 +67,23 @@
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="#">PQR</a>
               </div>
+=======
+            <li class="nav-item">
+              @if (Route::has('login'))
+                @auth
+                <button><a href="{{ url('Inicio') }}" class="nav-link ">Inicio</a></button>
+                @else
+            </li>
+            <li class="nav-item">
+                <button><a href="{{ url('Seleccionar') }}" class="nav-link ">Iniciar sesion</a></button>
+            </li>
+            <li class="nav-item">
+                @if (Route::has('register'))
+                <button><a href="{{ route('register') }}" class="nav-link">Registrarse</a></button>
+                @endif
+                @endauth
+              @endif
+>>>>>>> 95936bd80a3584b20651c3a86fc56222b8623fe5
             </li>
           </ul>
           @if (Route::has('login'))
