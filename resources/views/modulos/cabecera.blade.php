@@ -1,5 +1,4 @@
 <header class="main-header">
-<<<<<<< HEAD
 <a href="{{url('Inicio')}}"class="logo">
     <span class="logo-mini"><b>C M</b></span>
     <span class="logo-lg"><b>Clinica-Esperanza</b></span>
@@ -15,27 +14,9 @@
 <ul class ="nav navbar-nav">
 <li class="dropdown user user-menu">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-=======
-    <a href="{{url('inicio')}}" class="logo">
-        <span class="logo-mini"><b>C M</b></span>
-        <span class="logo-lg"><b>Clinica Medica</b></span>
-    </a>
-    <nav class="navbar navbar-static-top">
-        <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </a>
-        <div class="navbar-custom-menu">
-            <ul class="nav navbar-nav">
-                <li class="dropdown user user-menu">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
->>>>>>> 95936bd80a3584b20651c3a86fc56222b8623fe5
 
                         {{ auth()->user()->name }}
 
-<<<<<<< HEAD
     <span class=hidden-xs"></span>
 </a>
 <ul class="dropdown-menu">
@@ -56,13 +37,6 @@
     </li>
 </ul>
 </li>
-=======
-                        <span class="hidden-xs"></span>
-                    </a>
-
-                    <ul class="dropdown-menu">
-                        <li class="user-footer">
->>>>>>> 95936bd80a3584b20651c3a86fc56222b8623fe5
 
                             <div class="pull-left">
                                 <a href="{{url('Mis-Datos/'.auth::id())}}" class="btn btn-primary btn-flat">perfil</a>
