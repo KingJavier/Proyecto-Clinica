@@ -21,22 +21,7 @@
 </a>
 <ul class="dropdown-menu">
     <li class="user-footer">
-        <div class="pull-left">
-            <a href="{{url('Mis-Datos-edit/'.auth()->user()->id)}}" class="btn btn-primary btn-flat">perfil</a>
-        </div>
-        <div class="pull-left">
-            <a href="{{ url('/') }}" class="btn btn-primary btn-flat">Volver</a>
-        </div>
-        <div class="pull-right">
-        <a href="{{route( 'logout')}}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="btn btn-danger btn-flat">salir</a>
-        </div>
-        <form method="post" id="logout-form" action="{{route('logout')}}">
-            @csrf
-        </form>
-        </div>
-    </li>
-</ul>
-</li>
+        
 
                             <div class="pull-left">
                                 <a href="{{url('Mis-Datos/'.auth::id())}}" class="btn btn-primary btn-flat">perfil</a>
