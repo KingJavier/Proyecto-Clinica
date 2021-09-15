@@ -1,5 +1,5 @@
 <header class="main-header">
-    <a href="{{url('inicio')}}" class="logo">
+    <a href="{{url('Inicio')}}" class="logo">
         <span class="logo-mini"><b>C M</b></span>
         <span class="logo-lg"><b>Clinica Medica</b></span>
     </a>
@@ -24,7 +24,7 @@
                         <li class="user-footer">
 
                             <div class="pull-left">
-                                <a href="{{url('Mis-Datos/'.auth::id())}}" class="btn btn-primary btn-flat">perfil</a>
+                                <a href="{{url('Mis-Datos/{id}'.auth::id())}}" class="btn btn-primary btn-flat">perfil</a>
                             </div>
 
                             <div class="pull-right">

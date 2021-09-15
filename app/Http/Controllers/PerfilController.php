@@ -16,7 +16,7 @@ class PerfilController extends Controller
      */
     public function index()
     {
-        //
+        return view('modulos.Mis-Datos');
     }
 
     /**
@@ -78,10 +78,9 @@ class PerfilController extends Controller
         $usuario[0]->email = $request->input('email');
         $Contraseña=$request->input('password');
 
-        if ($Contraseña >= 9) {
+        if ($Contraseña >= 1) {
             $ContraseñaDB = Hash::make($Contraseña);
             $usuario[0]->password= $ContraseñaDB;
-
         }else{
 
         }
