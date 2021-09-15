@@ -5,7 +5,7 @@
 </center>
 <div class="row">
     <div class="col-lg-3 col-xs-6">
-        <div class="small-box" style="background-color:#e66bc5; color:white;">
+        <div class="small-box" style="background-color:#33CEFF; color:white;">
     <div class="inner">
 <h3>Secretaria</h3>
 <p>Inicie Sesion</p>
@@ -20,7 +20,7 @@
     </div>
 
     <div class="col-lg-3 col-xs-6">
-        <div class="small-box" style="background-color:#928484; color:white;">
+        <div class="small-box" style="background-color:#26C6F9; color:white;">
     <div class="inner">
 <h3>Doctor</h3>
 <p>Inicie Sesion</p>
@@ -30,11 +30,11 @@
     </div>
 <a href="Ingresar" class="small-box-footer">
     Ingresar <i class="fa fa-arrow-circle-right"></i>
-</a>
+</a><br>
 </div>
     </div>
     <div class="col-lg-3 col-xs-6">
-        <div class="small-box" style="background-color:#69e9af; color:rgb(246, 222, 222);">
+        <div class="small-box" style="background-color:#1AB1F8; color:rgb(246, 222, 222);">
     <div class="inner">
 <h3>Paciente</h3>
 <p>Inicie Sesion</p>
@@ -49,7 +49,7 @@
     
  </div>
  <div class="col-lg-3 col-xs-6">
-        <div class="small-box" style="background-color:#9ba1c5; color:white;">
+        <div class="small-box" style="background-color:#1AC2F8; color:white;">
     <div class="inner">
 <h3>Administrador</h3>
 <p>Inicie Sesion</p>

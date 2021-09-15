@@ -17,11 +17,11 @@
 
                         {{ auth()->user()->name }}
 
-                        <span class="hidden-xs"></span>
-                    </a>
-
-                    <ul class="dropdown-menu">
+                        <span class=hidden-xs"></span>
+                        </a>
+                        <ul class="dropdown-menu">
                         <li class="user-footer">
+        
 
                             <div class="pull-left">
                                 <a href="{{url('Mis-Datos/{id}'.auth::id())}}" class="btn btn-primary btn-flat">perfil</a>
@@ -36,9 +36,7 @@
                         </li>
                     </ul>
                 </li>
-
             </ul>
-
         </div>
     </nav>
 </header>
