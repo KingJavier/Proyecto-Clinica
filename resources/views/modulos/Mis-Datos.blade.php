@@ -25,7 +25,7 @@
  
                     @enderror
                     <h2>Nueva contraseña</h2>
-                    <input type="texto" class="input-lg" name="password"
+                    <input type="text" class="input-lg" name="password"
                     value="">
  
                     </div>

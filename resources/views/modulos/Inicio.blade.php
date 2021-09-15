@@ -4,7 +4,7 @@
 <section class="content-header">
 <h1>Inicio</h1>
 </section>
-<!--{{$inicio->dias}}-->
+<!-- {{$inicio->dias}} -->
 <section class="content">
     <div class="container-fluid">
         @if (session('mensaje'))
